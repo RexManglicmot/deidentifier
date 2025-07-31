@@ -8,7 +8,8 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Ignore virtual environment
-.venv
+.venv/
+venv/
 
 # Ignore system files
 .DS_Store
