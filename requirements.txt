@@ -1,0 +1,8 @@
+spacy
+presidio-analyzer
+presidio-anonymizer
+fastapi
+streamlit
+uvicorn
+scikit-learn
+requests
