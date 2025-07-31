@@ -1,5 +1,5 @@
 from presidio_analyzer import AnalyzerEngine, PatternRecognizer, Pattern
-
+# Took awhile, but got the right venv installed
 
 def detect_pii(text: str):
     """
@@ -32,3 +32,5 @@ def detect_pii(text: str):
 
     # Return list of detected entities
     return results
+
+# COMPLETE
