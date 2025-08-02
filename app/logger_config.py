@@ -1,13 +1,18 @@
 # Python's standard logging module
 import logging
+import os
+
+
+# Ensure the logs directory exists (prevents crash if missing)
+os.makedirs("logs", exist_ok=True)
 
 # Basic configuration for logging
 logging.basicConfig(
     level=logging.INFO,     # Set minimum log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
     format="%(asctime)s - %(levelname)s - %(message)s",     # Log msg format with timestamp, level, and message
     handlers=[
-        logging.FileHander("logs/app.log"),     # Sae logs to a file named app.log in the logs/directory
-        logging.Streamhandler()                 # Also print in the terminal
+        logging.FileHandler("logs/app.log"),     # Sae logs to a file named app.log in the logs/directory
+        logging.StreamHandler()                 # Also print in the terminal
     ]
 )
 
