@@ -1,6 +1,8 @@
 ![Project Status](https://img.shields.io/badge/status-actively--developed-yellowgreen)
 
-🛠️ This project is actively being developed and improved with additional features and testing.
+# 🛠️ Status
+
+This project is **currently** being developed and improved with additional features and testing.
 
 
 # 🔐 Deidentifier
