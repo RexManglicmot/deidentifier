@@ -23,5 +23,4 @@ This project is **currently** being developed and improved with additional featu
 
 
 ## 🛠️ Tech Stack  
-- Python · Microsoft Presidio · Streamlit · FastAPI  
-- logging · pytest · GitHub Actions · Docker  
+- Python · Microsoft Presidio · Streamlit · FastAPI · logging · pytest · GitHub Actions · Docker  
