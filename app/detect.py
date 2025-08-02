@@ -1,10 +1,18 @@
 from presidio_analyzer import AnalyzerEngine, PatternRecognizer, Pattern
 # Took awhile, but got the right venv installed
 
+# Importing logger object
+from app.logger_config import logger
+
+
 def detect_pii(text: str):
     """
     Fuction will take in text data and return detected PII entities
     """
+
+    # Logging start
+    # Logs a message with INFO level (not DEBUG or ERROR)
+    logger.info("Starting PII detection...")
 
     # Create the default Presidio analyzer engine
     analyzer = AnalyzerEngine()
@@ -29,6 +37,12 @@ def detect_pii(text: str):
         text=text,
         language="en"
     )
+
+    # Loging end with entity types
+    # Logs a message with INFO level (not DEBUG or ERROR)
+    # A LIST COMPREHENSION that loops through the results list and extracts the entity_type from each item
+    # Example: Completed PII detection. Types: ['EMAIL_ADDRESS', 'MRN', 'EMAIL_ADDRESS']
+    logger.info(f"Completed PII detection. Types: {[r.entity_type for r in results]}")  
 
     # Return list of detected entities
     return results

@@ -6,6 +6,7 @@ It's the middle layer between your web/API interface (app.py) and your core logi
 
 from app.detect import detect_pii
 from app.redact import redact_text
+from app.logger_config import logger
 
 def deidentify_pipeline(text: str) -> str:
     """
@@ -14,8 +15,14 @@ def deidentify_pipeline(text: str) -> str:
     Output: Rredacted text with PII removed
     """
 
+    # Logging start
+    logger.info("Logging start")
+
     pii_entities = detect_pii(text)                     # Detect PII entities
     redacted_text = redact_text(text, pii_entities)     # Redact those entities
+
+    # Logging end
+    logger.info("Logging end")
 
     return redacted_text
 

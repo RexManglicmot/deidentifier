@@ -1,4 +1,6 @@
 from sklearn.metrics import precision_score, recall_score, f1_score
+from app.logger_config import logger
+
 
 def evaluate_entities(true_entities, predicted_entities):
     """
@@ -17,6 +19,9 @@ def evaluate_entities(true_entities, predicted_entities):
     # This function is only used inside evaluate_entities, so we keep it nested
     # to limit its scope and avoid cluttering the module-level namespace.
     
+    # Logging start
+    logger.info("Starting evaluation of detected entities...")
+
     def spans_to_set(entity_list):
 
         # e here is each element in the entity list
@@ -44,6 +49,9 @@ def evaluate_entities(true_entities, predicted_entities):
 
     # Calculate F1 score: harmonic mean of precision and recall
     f1 = (2 * precision * recall) / (precision + recall) if (precision + recall) else 0
+
+    # Logging end
+    logger.info("Evaluation Complete")
 
     # Return metrics as a dictionary
     return {

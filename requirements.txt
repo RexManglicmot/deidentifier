@@ -6,3 +6,4 @@ streamlit
 uvicorn
 scikit-learn
 requests
+logging
