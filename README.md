@@ -20,3 +20,8 @@ This project is **currently** being developed and improved with additional featu
 - 🪵 Structured logging with rotating file logs and console output
 - 🧪 Ready for **unit testing** and **CI/CD integration**
 - 💻 Easily extensible to web frameworks like **Streamlit** or **FastAPI**
+
+
+## 🛠️ Tech Stack  
+- Python · Microsoft Presidio · Streamlit · FastAPI  
+- logging · pytest · GitHub Actions · Docker  
